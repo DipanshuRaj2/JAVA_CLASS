@@ -5,14 +5,15 @@ class ThrowDemo{
             throw new NullPointerException("heloooo");
 
         }
-        catch(NullPointerException e)
-        {
-            System.out.println("Caught inside Demo");
-            throw e; //rethrow the exception
-        }
+        // catch(NullPointerException e)
+        // {
+        //     System.out.println("Caught inside Demo");
+        //     throw e; //rethrow the exception
+        // }
         catch(Exception e)
         {
             System.out.println("Caught Inside demo");
+            throw e;
             //in a ladder of catch only one catch can access
         }
     }
