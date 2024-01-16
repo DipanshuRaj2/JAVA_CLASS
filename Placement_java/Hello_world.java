@@ -4,7 +4,7 @@ class Hello_world{
         
         
 
-        Scanner sc = new Scanner(System.in);
+        // Scanner sc = new Scanner(System.in);
 
         // System.out.println("Enter the value of a: ");
         // int a = sc.nextInt();
@@ -61,11 +61,37 @@ class Hello_world{
         // for(int i = 1; i<=n; i++){
         //     System.out.println("i = "+i);
         // }
+        Scanner sc =new Scanner(System.in);
+
+        int size = sc.nextInt();
+
+        int arr[] = new int[size];
+
+        for(int i = 0; i<size; i++){
+            arr[i] = sc.nextInt();
+        }
+        int sum = 0;
+        for(int i = 0; i<size; i++){
+            sum = sum+arr[i];
+        }
         
-        int a = 0;
-        int b = 1;
-        cout<<a<<" "<<b; 
+        System.out.println("sum : "+sum);
+        System.out.println("avg : "+sum/size);
+        int max = arr[0];
+        int min = arr[0];
+        for(int i = 1; i<size; i++){
+            if(arr[i] > max)
+                max = arr[i];
+
+            if(arr[i]<min)
+                min = arr[i];
+        }
+        System.out.println("max :"+max);
+        System.out.println("min :"+min);
+
+
         
+
         
     }
 }
